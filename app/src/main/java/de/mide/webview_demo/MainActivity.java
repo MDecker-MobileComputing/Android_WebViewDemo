@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	/** Browser-Element, in dem die Hilfeseite oder ein Comic angezeigt wird. */
 	protected WebView _webview = null;
 	
-	/** Zufallsgenerator für Erzeugungs von Zufallswerten für das Datum des Comics. */
+	/** Zufallsgenerator für Erzeugungs von Zufallsdatumswerten. */
 	protected Random _random = new Random();
 	
 	
@@ -60,8 +60,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_main);
 		
 		// Referenzen auf UI-Elemente abfragen
-		_ladeButton  = (Button)   findViewById( R.id.ladeButton );
-		_webview     = (WebView)  findViewById( R.id.webview1   );
+		_ladeButton  = findViewById( R.id.ladeButton );
+		_webview     = findViewById( R.id.webview1   );
 		
 		
 		// Event-Handler-Objekt für Button zuweisen
@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				
 		String artikelURL = "http://dilbert.com/strip/" + erzeugeZufallsDatum();
 		// Um das Laden von unverschlüsselten Web-Seiten (http statt https) zu
-        // erlauben kann u.a. in der Manifest-Datei das Attribut
+        // erlauben, kann u.a. in der Manifest-Datei das Attribut
         // android:usesCleartextTraffic="true" gesetzt werden; es gibt aber
         // noch andere Möglichkeiten, siehe https://stackoverflow.com/a/50834600/1364368
 		
@@ -116,13 +116,13 @@ public class MainActivity extends Activity implements OnClickListener {
 	@SuppressLint("SimpleDateFormat")
 	protected String erzeugeZufallsDatum() {
 
-		// *** Schritt 1: Aktuellen Tag (z.B. "32" für 1. Februar) & Jahreszahl bestimmen
+		// *** Schritt 1: Aktuellen Tag (z.B. "32" für 1. Februar) & Jahreszahl bestimmen ***
 		GregorianCalendar calendarHeute = new GregorianCalendar();
 						
 		int jahrHeute = calendarHeute.get(Calendar.YEAR);  // aktuelles Jahr, z.B. 2015
 		
 		
-		// *** Schritt 2: Zufalls-Datum erstellen
+		// *** Schritt 2: Zufalls-Datum erstellen ***
 		int zufallsTagImJahr = 0;
 				
 		int zufallsJahr = erzeugeZufallszahlImBereich(1989, jahrHeute);
@@ -156,7 +156,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		
 		
-		// *** Schritt 3: String-Repräsentation des Zufall-Datums bauen
+		// *** Schritt 3: String-Repräsentation des Zufall-Datums bauen ***
 		DateFormat datumsFormatierer = new SimpleDateFormat("yyyy-MM-dd");
 		
 		return datumsFormatierer.format( calendarZufall.getTime() );
