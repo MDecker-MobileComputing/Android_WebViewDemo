@@ -9,8 +9,16 @@
 
     <!--
         Attribut android:usesCleartextTraffic="true" um non-httpS-Verbindungen
-        ab Android 9.0 zu erlauben.
+        ab Android 9.0 (API-Level 28) zu erlauben.
         siehe auch: https://stackoverflow.com/a/50834600/1364368
+
+        Wenn dieses Attribut nicht gesetzt ist, dann wird auf einem Android-Gerät
+        ab Version 9.0 im WebView-Element der Fehler "net::ERR_CLEARTEXT_NOT_PERMITTED"
+        angezeigt, wenn versucht wird, eine non-httpS-URL aufzurfen.
+                
+        "WebView honors this attribute for applications targeting API level 26 and higher."
+        "This attribute was added in API level 23."
+        https://developer.android.com/guide/topics/manifest/application-element
      -->
     <application
         android:usesCleartextTraffic="true"
