@@ -21,18 +21,18 @@ import android.widget.Toast;
 
 
 /** 
- * App für Demo des UI-Elements "WebView" (Browser-Widget).<br/><br/>
+ * App für Demo des UI-Elements "WebView" (Browser-Widget).<br><br>
  * 
  * Mit dem WebView-Element werden einzelne Dilbert-Comics angezeigt.
  * Die URL muss ein Datum enthalten. Beispiel-URL für den ältesten Comic (16. April 1989):
  * <a href="http://dilbert.com/strip/1989-04-16">http://dilbert.com/strip/1989-04-16</a>
- * <br/><br/>
+ * <br><br>
  * Die Datums-Werte für die Comics werden durch einen Zufallsgenerator erzeugt
  * (siehe Methode {@link MainActivity#erzeugeZufallsDatum()}.
  * Sollte über die URL ein Datums-Wert vor dem 16. April 1989 spezifiziert werden,
  * dann wird automatisch dieser älteste Comic anzeigt. Für Datumswerte in der Zukunft
  * wird auf den aktuellen (d.h. heutigen) Comic weitergeleitet.
- * <br/><br/>
+ * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
@@ -56,6 +56,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	 */	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
@@ -97,7 +98,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	/**
 	 * Erzeugt ein Zufalls-Datum zum Aufruf eines Dilbert-Comics. Es ist gewährleistet,
 	 * dass das Datum nicht vor dem <i>16. April 1989</i> ist, weil dies der älteste
-	 * verfügbare Comic ist.<br/><br/>
+	 * verfügbare Comic ist.<br><br>
 	 * 
 	 * <b>Funktionsweise:</b> Es wird erst ein Zufallsjahr ausgewürfelt. Wenn dieses Jahr größer als
 	 * 1989 und echt kleiner als das aktuelle Jahr ist, dann wird der Tag im Jahr ausgewürfelt
@@ -106,11 +107,11 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * die aktuelle Jahreszahl und den aktuellen Tag zu bestimmen, und ein zweites, mit dem das
 	 * Zufallsdatum "konstruiert" wird.
 	 * Siehe auch: <a href="http://stackoverflow.com/a/3985644/1364368">http://stackoverflow.com/a/3985644/1364368</a>   
-	 * <br/><br/> 
+	 * <br><br> 
 	 *  
 	 * @return String mit Zufalls-Datum im Format <i>yyyy-mm-dd</i>,
      *         kann direkt an URL angehängt werden.
-	 *         Die Zahl für den Tag und den Monat ist immer zweistellig.<br/>
+	 *         Die Zahl für den Tag und den Monat ist immer zweistellig.<br>
 	 *         Beispiel: <i>2014-01-31</i> (31. Januar 2014)
 	 */
 	@SuppressLint("SimpleDateFormat")

@@ -2,7 +2,9 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.mide.webview_demo"
-    android:installLocation="auto">
+    android:installLocation="auto"
+    android:versionCode="2"
+	android:versionName="1.1 (Februar 2019)" >
 
     <!-- Berechtigung für Internet-Zugriff -->
     <uses-permission android:name="android.permission.INTERNET" />

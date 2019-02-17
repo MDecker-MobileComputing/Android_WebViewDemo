@@ -1,6 +1,6 @@
 # Android-App "Browser-Demo"
 
-App demonstrates how to use Android's element [WebView](https://developer.android.com/reference/android/webkit/WebView) to display web pages from the internet or provided as raw resource.
+App demonstrates how to use Android's [WebView element](https://developer.android.com/reference/android/webkit/WebView) to display web pages from the internet or provided as raw resource.
 
 <br>
 
