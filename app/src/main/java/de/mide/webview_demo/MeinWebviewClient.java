@@ -40,6 +40,7 @@ public class MeinWebviewClient extends WebViewClient {
 	 * Event-Handler-Methode für Fehlerfall; der Lade-Button wird wieder aktiviert.
 	 */
 	public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+
 		Log.e(MainActivity.TAG4LOGGING, 
 			  "Fehler beim Laden einer URL mit dem WebView-Element: " + description + 
 			  ", URL: " + failingUrl + ", Fehler-Code: " + errorCode);
@@ -75,6 +76,7 @@ public class MeinWebviewClient extends WebViewClient {
 	 * in einer externe Browser-App geöffnet wird, sondern im WebView-Element dieser App.
 	 */
 	public boolean shouldOverrideUrlLoading (WebView webView, String url) {
+		
 		Log.v(MainActivity.TAG4LOGGING, "Aufruf externer URL: " + url);
 		webView.loadUrl(url);
 		return false;  

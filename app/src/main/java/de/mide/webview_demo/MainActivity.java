@@ -156,7 +156,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		calendarZufall.set(Calendar.DAY_OF_YEAR, zufallsTagImJahr);
 		
 		
-		
 		// *** Schritt 3: String-Repräsentation des Zufall-Datums bauen ***
 		DateFormat datumsFormatierer = new SimpleDateFormat("yyyy-MM-dd");
 		
@@ -202,8 +201,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			// HTML-Seite zeilenweise einlesen
 			String       currentLine  = null;
 			StringBuffer stringBuffer = new StringBuffer();
-			while ( (currentLine = reader.readLine()) != null )
+			while ( (currentLine = reader.readLine()) != null ) {
 				stringBuffer.append(currentLine);
+			}
 							
 			reader.close();
 						
