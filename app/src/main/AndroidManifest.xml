@@ -4,6 +4,7 @@
     package="de.mide.webview_demo"
     android:installLocation="auto">
 
+
     <!-- Berechtigung für Internet-Zugriff -->
     <uses-permission android:name="android.permission.INTERNET" />
 
