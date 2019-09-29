@@ -8,8 +8,6 @@ import android.widget.Button;
 
 
 /**
- * Nicht klausur-relevant!<br><br>
- * 
  * Eigene Unterklasse von WebViewClient-Objekt zur Behandlung von Events des WebView-Objektes.
  * Beispiele für solche Events sind z.B. Auftreten eines Fehlers oder Beendigung des Ladevorgangs.
  * <br><br>
@@ -32,6 +30,7 @@ public class MeinWebviewClient extends WebViewClient {
 	 *                   Dieser Button wird während des Ladevorgangs deaktiviert.
 	 */
 	public MeinWebviewClient(Button ladeButton) {
+
 		_ladeButton = ladeButton;
 	}
 	
@@ -76,7 +75,7 @@ public class MeinWebviewClient extends WebViewClient {
 	 * in einer externe Browser-App geöffnet wird, sondern im WebView-Element dieser App.
 	 */
 	public boolean shouldOverrideUrlLoading (WebView webView, String url) {
-		
+
 		Log.v(MainActivity.TAG4LOGGING, "Aufruf externer URL: " + url);
 		webView.loadUrl(url);
 		return false;  
