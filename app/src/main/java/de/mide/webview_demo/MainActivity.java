@@ -78,7 +78,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * Einzige Methode aus Interface dem OnClickListener, Event-Handler für Button.
 	 * Lädt HTML-Seite mit neuem Comic anhand Zufalls-Datum in das WebView-Element.
 	 *
-	 * @param view View-Objekt, welches das Event ausgelöst hat.
+	 * @param view  View-Objekt, welches das Event ausgelöst hat.
 	 */
 	@Override
 	public void onClick(View view) {
@@ -165,9 +165,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	/**
 	 * Methode liefert ganzzahlige Zufallszahl in einem bestimmten Bereich zurück.
 	 *
-	 * @param minWert Zufallszahl darf nicht echt-kleiner als diese Zahl sein.
+	 * @param minWert  Zufallszahl darf nicht echt-kleiner als diese Zahl sein.
 	 *
-	 * @param maxWert Zufallszahl darf nicht echt-größer als diese Zahl sein.
+	 * @param maxWert  Zufallszahl darf nicht echt-größer als diese Zahl sein.
 	 *
 	 * @return Zufallszahl im geschlossenen Werte-Bereich von <i>minWert</i> bis <i>maxWert</i>.
 	 */
