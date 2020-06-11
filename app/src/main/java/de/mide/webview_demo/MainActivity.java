@@ -27,6 +27,7 @@ import android.widget.Toast;
  * Die URL muss ein Datum enthalten. Beispiel-URL für den ältesten Comic (16. April 1989):
  * <a href="http://dilbert.com/strip/1989-04-16">http://dilbert.com/strip/1989-04-16</a>
  * <br><br>
+ *
  * Die Datums-Werte für die Comics werden durch einen Zufallsgenerator erzeugt
  * (siehe Methode {@link MainActivity#erzeugeZufallsDatum()}.
  * Sollte über die URL ein Datums-Wert vor dem 16. April 1989 spezifiziert werden,
