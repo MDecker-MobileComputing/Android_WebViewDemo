@@ -51,11 +51,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected Random _random = new Random();
 
 
-	/**
-	 * Lifecycle-Methode für Initialisierung der UI.
-	 * Lädt auch die Hilfe-Seite in das WebView-Element.
-	 */
-	@Override
+    /**
+     * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
+     */	
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
@@ -69,7 +68,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		// Event-Handler-Objekt für Button zuweisen
 		_ladeButton.setOnClickListener(this);
 
-		_webview.setWebViewClient( new MeinWebviewClient( _ladeButton ) );   // nicht klausur-relevant
+		_webview.setWebViewClient( new MeinWebviewClient( _ladeButton ) ); // nicht klausur-relevant
 
 		ladeHilfeSeite();
 	}
@@ -107,7 +106,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * Es werden zwei Objekte der Klasse {@link java.util.GregorianCalendar} verwendet: Eines, um
 	 * die aktuelle Jahreszahl und den aktuellen Tag zu bestimmen, und ein zweites, mit dem das
 	 * Zufallsdatum "konstruiert" wird.
-	 * Siehe auch: <a href="http://stackoverflow.com/a/3985644/1364368">http://stackoverflow.com/a/3985644/1364368</a>
+	 * Siehe auch: 
+     * <a href="http://stackoverflow.com/a/3985644/1364368">http://stackoverflow.com/a/3985644/1364368</a>
 	 * <br><br>
 	 *
 	 * @return String mit Zufalls-Datum im Format <i>yyyy-mm-dd</i>,
