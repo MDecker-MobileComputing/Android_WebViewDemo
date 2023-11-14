@@ -8,6 +8,10 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText _statusCodeEditText = null;
@@ -27,6 +31,33 @@ public class MainActivity extends AppCompatActivity {
 
         _statusCodeEditText = findViewById(R.id.editTextNumber);
         _webView = findViewById(R.id.webview1);
+
+        hilfeseiteAnzeigen();
+    }
+
+    private void hilfeseiteAnzeigen() {
+
+        String hilfeseiteHtml = ladeHtmlRawRessource();
+
+        final String mimeType = "text/html";
+        final String encoding = "UTF-8";
+        _webView.loadData( hilfeseiteHtml, mimeType, encoding );
+    }
+
+
+    /**
+     * Lösung nach https://stackoverflow.com/a/73633910/1364368
+     *
+     * @return String aus Raw-Ressource-Datei
+     */
+    private String ladeHtmlRawRessource() {
+
+        InputStream is = getResources().openRawResource(R.raw.hilfeseite);
+
+        String text = new BufferedReader( new InputStreamReader(is) )
+                .lines().reduce("\n", (a,b) -> a+b);
+
+        return text;
     }
 
     /**
