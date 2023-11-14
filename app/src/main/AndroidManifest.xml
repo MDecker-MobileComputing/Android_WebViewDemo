@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="de.mide.webview_demo"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <!-- Berechtigung für Internet-Zugriff -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!--
-        Attribut android:usesCleartextTraffic="true" um non-httpS-Verbindungen
-        ab Android 9.0 (API-Level 28) zu erlauben.
-        siehe auch: https://stackoverflow.com/a/50834600/1364368
-
-        Wenn dieses Attribut nicht gesetzt ist, dann wird auf einem Android-Gerät
-        ab Version 9.0 im WebView-Element der Fehler "net::ERR_CLEARTEXT_NOT_PERMITTED"
-        angezeigt, wenn versucht wird, eine non-httpS-URL aufzurfen.
-                
-        "WebView honors this attribute for applications targeting API level 26 and higher."
-        "This attribute was added in API level 23."
-        https://developer.android.com/guide/topics/manifest/application-element
-     -->
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.WebViewDemo"
+        tools:targetApi="31">
 
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
             <intent-filter>
-                <action   android:name="android.intent.action.MAIN"       />
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

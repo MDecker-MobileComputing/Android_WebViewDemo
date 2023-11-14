@@ -1,28 +1,43 @@
 <RelativeLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:background="#C0C0C0"
-	tools:context=".MainActivity">
-    
-    
-    <Button
-        android:id="@+id/ladeButton"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_margin="5dp"
-        android:text="@string/label_comic_laden_button" />
-            
-    
+        android:hint="@string/edittext_statuscode"
+        android:inputType="number"
+        android:maxLength="3"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+
+    <Button
+        android:id="@+id/nachschlagenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/editTextNumber"
+        android:text="@string/button_nachschlagen"
+        android:onClick="onNachschlagenButton" />
+
     <WebView
         android:id="@+id/webview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
-        android:layout_below="@id/ladeButton" />
+        android:layout_below="@id/editTextNumber" />
 
 </RelativeLayout>
-

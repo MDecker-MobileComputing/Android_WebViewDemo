@@ -2,6 +2,7 @@
 
     <string name="app_name">WebView-Demo</string>
 
-    <string name="label_comic_laden_button">Zufalls-Comic laden</string>
+    <string name="button_nachschlagen">Nachschlagen</string>
+    <string name="edittext_statuscode">HTTP Status Code</string>
 
 </resources>
