@@ -12,8 +12,15 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * App demonstriert Verwendung von Dialogen, Toasts und Log-Nachrichten.
+ * <br><br>
+ *
+ * This project is licensed under the terms of the BSD 3-Clause License.
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /** Eingabefeld für HTTP-Status-Code, nimmt nur Zahlen bis zu drei Stellen entgegen. */
     private EditText _statusCodeEditText = null;
 
     /** Browser-Widget. */
@@ -35,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         hilfeseiteAnzeigen();
     }
 
+    /**
+     * Methode bringt statische HTML-Seite (Raw Ressource)
+     * in WebView-Element zur Anzeige.
+     */
     private void hilfeseiteAnzeigen() {
 
         String hilfeseiteHtml = ladeHtmlRawRessource();
