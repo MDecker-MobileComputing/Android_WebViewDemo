@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             codeAsInt = Integer.parseInt(statusCodeEingabeTrimmed);
             if (codeAsInt >= 600) {
 
-                zeigeToast("HTTP-Status-Code dürfen nicht größer als 599 sein.");
+                zeigeToast("HTTP-Status-Code darf nicht größer als 599 sein.");
                 return;
             }
         }
@@ -111,7 +111,11 @@ public class MainActivity extends AppCompatActivity {
         _webView.loadUrl(url);
     }
 
-
+    /**
+     * Nachricht in Toast anzeigen (verschwindet von selbst wieder).
+     *
+     * @param nachricht Text, der in Toast angezeigt wird.
+     */
     private void zeigeToast(String nachricht) {
 
         Toast.makeText(this, nachricht, Toast.LENGTH_LONG).show();
