@@ -23,7 +23,7 @@ jobs:
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Aktuelles Datum+Zeit
         id: step_id_zeitstempel
-        run: echo "::set-output name=zeitstempel::$(date +'%Y-%m-%d_%H-%M-%S')"
+        run: echo "::set-output name=zeitstempel::$(date +'%Y-%m-%d_%H-%M')"
       - name: APK-Datei hochladen
         uses: actions/upload-artifact@v3
         with:
