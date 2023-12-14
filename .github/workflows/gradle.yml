@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
       - name: Gradle aufrufen
         run: bash ./gradlew assembleDebug --stacktrace
-      - name: Aktuelles Datum+Zeit
+      - name: Aktuellen Zeitstempel in Umgebungsvariable
         run: echo "zeitstempel=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_ENV
       - name: APK-Datei hochladen
         uses: actions/upload-artifact@v3
