@@ -21,9 +21,12 @@ jobs:
           distribution: 'temurin'
       - name: Gradle aufrufen
         run: bash ./gradlew assembleDebug --stacktrace
+      - name: Aktuelles Datum+Zeit
+          id: step_id_zeitstempel
+         run: echo "::set-output name=zeitstempel::$(date +'%Y-%m-%d_%H-%M-%S')"
       - name: APK-Datei hochladen
         uses: actions/upload-artifact@v3
         with:
-          name: WebViewDemo_AndroidInstallFile
+          name: WebViewDemo_AndroidInstallFile-${{ steps.step_id_zeitstempel.outputs.zeitstempel }}
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
