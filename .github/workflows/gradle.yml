@@ -22,7 +22,7 @@ jobs:
       - name: Gradle aufrufen
         run: bash ./gradlew assembleDebug --stacktrace
       - name: APK-Datei hochladen
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: WebViewDemo_AndroidInstallFile
           path: app/build/outputs/apk/debug/app-debug.apk
