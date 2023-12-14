@@ -9,7 +9,7 @@ on:
 
 jobs:
   job-apk-bauen:
-    name: APK
+    name: Debug-APK bauen
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
