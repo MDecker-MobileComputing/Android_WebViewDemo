@@ -1,0 +1,28 @@
+# Vorlage: https://gist.github.com/alexanderbazo/227476190ef5ab655795e34ec0d314d6
+
+name: APK-Datei bauen
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  job-apk-bauen:
+    name: APK
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+      - name: Gradle aufrufen
+        run: bash ./gradlew assembleDebug --stacktrace
+      - name: APK-Datei hochladen
+        uses: actions/upload-artifact@v1
+        with:
+          name: WebViewDemo_AndroidInstallFile
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
