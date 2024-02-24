@@ -2,8 +2,9 @@
 
 <br>
 
-App demonstrates how to use Android's [WebView element](https://developer.android.com/reference/android/webkit/WebView) 
-to display web pages from the internet or provided as raw resource.
+Dieses Repo enthält den Quellcode für eine Android-App, die demonstriert, wie man mit dem
+[WebView](https://developer.android.com/reference/android/webkit/WebView)-Elemente
+Webseiten aus dem Internet oder in die App eingebetteten Web-Content anzeigt.
 
 <br>
 
