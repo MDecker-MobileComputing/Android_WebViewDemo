@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     /** Browser-Widget. */
     private WebView _webView = null;
 
+
     /**
      * Lifecycle-Methode, lädt Layout-Datei und füllt Member-Variablen mit Referenzen
      * auf UI-Elemente.
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         hilfeseiteAnzeigen();
     }
+
 
     /**
      * Methode bringt statische HTML-Seite (Raw Ressource)
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         return text;
     }
+
 
     /**
      * Event-Handler für Button zur Anzeige von Infos für den eingegebenen HTTP-Status-Code.
@@ -110,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         _webView.loadUrl(url);
     }
+
 
     /**
      * Nachricht in Toast anzeigen (verschwindet von selbst wieder).
