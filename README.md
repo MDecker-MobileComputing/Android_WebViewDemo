@@ -10,6 +10,16 @@ Webseiten aus dem Internet oder in die App eingebetteten Web-Content anzeigt.
 
 ----
 
+## Screenshot ##
+
+<br>
+
+![Screenshot](screenshot_1.png)
+
+<br>
+
+----
+
 ## License ##
 
 <br>
