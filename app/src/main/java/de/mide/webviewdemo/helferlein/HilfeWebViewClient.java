@@ -35,14 +35,15 @@ public class HilfeWebViewClient extends WebViewClient {
 
         final Uri zielUrl = request.getUrl();
 
-        Log.i(TAG4LOGGING, "Ziel-URL: " + zielUrl);
-
-        boolean interneURL = zielUrl.toString().startsWith("file:///android_asset");
+        boolean interneURL = zielUrl.toString().startsWith("file:///android_asset/");
         if (interneURL) {
 
+            Log.i(TAG4LOGGING, "Ziel-URL (in WebView anzeigen): " + zielUrl);
             return false; // im WebView anzeigen
 
         } else {
+
+            Log.i(TAG4LOGGING, "Ziel-URL (in externem Browser anzeigen): " + zielUrl);
 
             final Intent intent = new Intent(Intent.ACTION_VIEW, zielUrl);
             _context.startActivity(intent);
