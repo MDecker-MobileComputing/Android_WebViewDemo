@@ -26,7 +26,7 @@ public class HilfeWebViewClient extends WebViewClient {
      * @param request Request um neue URL zu laden (v.a. wegen Klick auf Hyperlink im
      *                dargestellten HTML).
      *
-     * @return {@code false}, wenn die URL im WebView-Element angezeigt werden soll,
+     * @return {@code false}, wenn die URL auch im WebView-Element angezeigt werden soll,
      *         {@code true}, wenn sie in einer externen Browser-App angezeigt werden
      *         soll.
      */
@@ -40,15 +40,15 @@ public class HilfeWebViewClient extends WebViewClient {
         boolean interneURL = zielUrl.toString().startsWith("file:///android_asset");
         if (interneURL) {
 
-            return false;
+            return false; // im WebView anzeigen
 
         } else {
 
-            Intent intent = new Intent(Intent.ACTION_VIEW, zielUrl);
+            final Intent intent = new Intent(Intent.ACTION_VIEW, zielUrl);
             _context.startActivity(intent);
+
             return true;
         }
-
     }
 
 }
