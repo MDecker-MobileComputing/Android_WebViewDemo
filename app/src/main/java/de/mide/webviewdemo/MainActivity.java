@@ -2,6 +2,7 @@ package de.mide.webviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -112,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
         String url = "https://http.cat/status/" + statusCodeEingabeTrimmed;
 
         _webView.loadUrl(url);
+    }
+
+    /**
+     * Event-Handler für Button, um Hilfeseite (besteht nur aus WebView)
+     * aufzurufen.
+     */
+    public void onHilfeButton(View view) {
+
+        Intent intent = new Intent(this, HilfeActivity.class );
+        startActivity(intent);
     }
 
 

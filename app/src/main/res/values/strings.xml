@@ -3,6 +3,7 @@
     <string name="app_name">WebView-Demo</string>
 
     <string name="button_nachschlagen">Nachschlagen</string>
+    <string name="button_hilfe">Hilfe</string>
     <string name="edittext_statuscode">HTTP Status Code</string>
 
 </resources>

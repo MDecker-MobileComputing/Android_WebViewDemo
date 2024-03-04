@@ -25,12 +25,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/editTextNumber"
         android:text="@string/button_nachschlagen"
         android:onClick="onNachschlagenButton" />
+
+    <Button
+        android:id="@+id/hilfeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/nachschlagenButton"
+        android:text="@string/button_hilfe"
+        android:onClick="onHilfeButton" />
 
     <WebView
         android:id="@+id/webview1"
