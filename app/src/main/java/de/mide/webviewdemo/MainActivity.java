@@ -14,7 +14,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * App demonstriert Verwendung von Dialogen, Toasts und Log-Nachrichten.
+ * App demonstriert Verwendung von WebView-Element.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
@@ -66,11 +66,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private String ladeHtmlRawRessource() {
 
-        InputStream is = getResources().openRawResource(R.raw.hilfeseite);
+        final InputStream is = getResources().openRawResource(R.raw.hilfeseite);
 
-        String text = new BufferedReader( new InputStreamReader(is) )
-                .lines().reduce("\n", (a,b) -> a+b);
-
+        final String text = new BufferedReader( new InputStreamReader(is) )
+                                            .lines().reduce("\n", (a,b) -> a+b);
         return text;
     }
 
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onNachschlagenButton(View view) {
 
-        String statusCodeEingabeTrimmed = _statusCodeEditText.getText().toString().trim();
+        final String statusCodeEingabeTrimmed = _statusCodeEditText.getText().toString().trim();
         if (statusCodeEingabeTrimmed.length() != 3) {
 
             zeigeToast("HTTP-Status-Code muss genau drei Ziffern haben.");
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onHilfeButton(View view) {
 
-        Intent intent = new Intent(this, HilfeActivity.class );
+        final Intent intent = new Intent(this, HilfeActivity.class );
         startActivity(intent);
     }
 
