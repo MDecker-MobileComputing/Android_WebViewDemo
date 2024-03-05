@@ -68,8 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
         final InputStream is = getResources().openRawResource(R.raw.hilfeseite);
 
-        final String text = new BufferedReader( new InputStreamReader(is) )
-                                            .lines().reduce("\n", (a,b) -> a+b);
+        final BufferedReader br = new BufferedReader( new InputStreamReader(is) );
+
+        final String text = br.lines().reduce("\n", (a,b) -> a+b);
+
         return text;
     }
 
