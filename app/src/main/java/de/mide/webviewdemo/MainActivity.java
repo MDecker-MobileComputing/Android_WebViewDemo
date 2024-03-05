@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         _webView.loadUrl(url);
     }
 
+    
     /**
      * Event-Handler für Button, um Hilfeseite (besteht nur aus WebView)
      * aufzurufen.

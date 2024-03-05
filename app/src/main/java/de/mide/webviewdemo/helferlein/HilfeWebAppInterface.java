@@ -2,10 +2,10 @@ package de.mide.webviewdemo.helferlein;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.webkit.JavascriptInterface;
 
 import static de.mide.webviewdemo.BuildConfig.BUILD_ZEITPUNKT;
+
 
 /**
  * Eine Instanz dieser Methode muss mit {@code addJavascriptInterface()}
@@ -50,6 +50,7 @@ public class HilfeWebAppInterface {
         AlertDialog dialog = dialogBuilder.create();
         dialog.show();
     }
+
 
     /**
      * Wenn das Objekt mit dem Prefix "MeinJsPrefix" am WebView registriert wird,

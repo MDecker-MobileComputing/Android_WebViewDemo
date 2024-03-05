@@ -1,11 +1,6 @@
 package de.mide.webviewdemo;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-
 import android.os.Bundle;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 

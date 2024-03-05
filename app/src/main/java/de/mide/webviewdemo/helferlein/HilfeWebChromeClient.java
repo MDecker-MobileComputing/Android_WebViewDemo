@@ -4,6 +4,7 @@ import android.util.Log;
 import android.webkit.ConsoleMessage;
 import android.webkit.WebChromeClient;
 
+
 /**
  * Ein Objekt dieser Klasse muss am WebView-Element mit der Methode {@code setWebViewClient()}
  * registriert werden.
