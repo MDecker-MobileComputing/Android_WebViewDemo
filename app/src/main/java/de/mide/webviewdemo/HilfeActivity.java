@@ -32,7 +32,7 @@ public class HilfeActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
         HilfeWebAppInterface wai = new HilfeWebAppInterface(this);
-        webView.addJavascriptInterface( wai, "Android" );
+        webView.addJavascriptInterface( wai, "MeinJsPrefix" );
 
         final HilfeWebViewClient webClient = new HilfeWebViewClient(this);
         webView.setWebViewClient(webClient);
