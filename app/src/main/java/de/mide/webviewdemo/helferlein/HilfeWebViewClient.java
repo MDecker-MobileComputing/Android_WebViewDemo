@@ -1,7 +1,9 @@
 package de.mide.webviewdemo.helferlein;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.util.Log;
 import android.webkit.WebResourceRequest;
@@ -34,6 +36,9 @@ public class HilfeWebViewClient extends WebViewClient {
 
 
     /**
+     * Wenn im WebView auf einen HTML-Link geklickt wird, dann entscheidet diese Methode,
+     * ob der Link im WebView geöffnet wird, oder in einer externen Browser-App.
+     *
      *
      * @param view WebView-Element, das das Event ausgelöst hat.
      *
@@ -49,7 +54,7 @@ public class HilfeWebViewClient extends WebViewClient {
 
         final Uri zielUrl = request.getUrl();
 
-        boolean interneURL = zielUrl.toString().startsWith("file:///android_asset/");
+        final boolean interneURL = zielUrl.toString().startsWith("file:///android_asset/");
         if (interneURL) {
 
             Log.i(TAG4LOGGING, "Ziel-URL (in WebView anzeigen): " + zielUrl);
@@ -60,7 +65,43 @@ public class HilfeWebViewClient extends WebViewClient {
             Log.i(TAG4LOGGING, "Ziel-URL (in externem Browser anzeigen): " + zielUrl);
 
             final Intent intent = new Intent(Intent.ACTION_VIEW, zielUrl);
-            _context.startActivity(intent);
+
+            if (wirdIntentUnterstuetzt(_context, intent)) {
+
+                _context.startActivity(intent);
+            }
+
+            return true;
+        }
+    }
+
+
+    /**
+     * Methode überprüft, ob ein impliziter Intent auf dem Gerät abgeschickt werden kann.
+     * Wenn es nicht mindestens eine App, die den Intent unterstützt, dann crasht die
+     * App, wenn der Intent trotzdem abgeschickt wird.
+     *
+     * @param context Referenz auf Activity
+     *
+     * @param intent Impliziter Intent
+     *
+     * @return {@code true}, wenn es mindestens eine App auf dem Gerät gibt, die den Intent
+     *         verarbeiten kann, sonst {@code false}
+     */
+    public static boolean wirdIntentUnterstuetzt(Context context, Intent intent) {
+
+        PackageManager packageManager = context.getPackageManager();
+        ComponentName componentName   = intent.resolveActivity(packageManager);
+
+        if (componentName == null) {
+
+            Log.w(TAG4LOGGING,
+                    "Nicht-unterstützter Intent: ACTION=" + intent.getAction() +
+                            ", DATA=" + intent.getDataString() );
+
+            return false;
+
+        } else {
 
             return true;
         }
