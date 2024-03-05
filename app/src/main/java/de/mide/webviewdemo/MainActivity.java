@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void hilfeseiteAnzeigen() {
 
-        String hilfeseiteHtml = ladeHtmlRawRessource();
+        final String hilfeseiteHtml = ladeHtmlRawRessource();
 
         final String mimeType = "text/html";
         final String encoding = "UTF-8";
