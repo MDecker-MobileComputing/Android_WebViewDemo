@@ -60,13 +60,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
+     * HTML-Seite als "raw Ressource" laden.
+     *
+     * <br>
      * Lösung nach https://stackoverflow.com/a/73633910/1364368
      *
      * @return String aus Raw-Ressource-Datei
      */
     private String ladeHtmlRawRessource() {
 
-        final InputStream is = getResources().openRawResource(R.raw.hilfeseite);
+        final InputStream is = getResources().openRawResource( R.raw.hilfeseite );
 
         final BufferedReader br = new BufferedReader( new InputStreamReader(is) );
 
