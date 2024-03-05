@@ -6,6 +6,9 @@ android {
     namespace 'de.mide.webviewdemo'
     compileSdk 33
 
+    // für BUILD_ZEITPUNKT unten
+    android.buildFeatures.buildConfig true
+
     defaultConfig {
         applicationId "de.mide.webviewdemo"
         minSdk 24
@@ -14,6 +17,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def buildTime = new Date()
+        buildConfigField "String", "BUILD_ZEITPUNKT", "\"${buildTime.format('dd MMM yyyy (EE), HH:mm')}\""
     }
 
     buildTypes {

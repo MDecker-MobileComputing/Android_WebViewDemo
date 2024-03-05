@@ -10,14 +10,23 @@ import android.webkit.WebViewClient;
 
 public class HilfeWebViewClient extends WebViewClient {
 
-    private Context _context;
-
     private static final String TAG4LOGGING = " HilfeWebView";
 
+    /** Activity mit WebView-Element. */
+    private Context _context;
+
+
+    /**
+     * Konstruktor, um Context-Objekt in Objektvariable
+     * zu kopieren.
+     *
+     * @param context Activity mit WebView-Element
+     */
     public HilfeWebViewClient(Context context) {
 
         _context = context;
     }
+
 
     /**
      *
