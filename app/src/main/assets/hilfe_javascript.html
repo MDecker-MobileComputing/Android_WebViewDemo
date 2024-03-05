@@ -5,25 +5,35 @@
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+
         function zeigeDialog() {
+
             MeinJsPrefix.zeigeDialogMitVersion();
         }
 
+
         function hilfeseiteSchliessen() {
+
+            console.log("Versuche, WebView mit Hilfeseite zu schließen");
             MeinJsPrefix.hilfeActivitySchliessen();
         }
+
     </script>
 </head>
 <body>
 
   <h1>JavaScript-Demo</h1>
 
+  <br><br>
+
   <button onclick="zeigeDialog()">Über diese App</button>
   &nbsp;
   <button onclick="hilfeseiteSchliessen()">Hilfe schließen</button>
 
+  <br><br>
+
   <p>
-      <a href="hilfe_index.html">Zurück Hauptseite</a>
+      <a href="hilfe_index.html">Zurück zur Hauptseite</a>
   </p>
 
 </body>

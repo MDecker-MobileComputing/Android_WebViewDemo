@@ -8,6 +8,11 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+
+/**
+ * Dieses WebClient-Objekt wird benötigt, um das Verhalten beim Klicken auf URLs
+ * in einer vom WebView-Element dargestellten HTML-Seite zu steuern.
+ */
 public class HilfeWebViewClient extends WebViewClient {
 
     private static final String TAG4LOGGING = " HilfeWebView";
