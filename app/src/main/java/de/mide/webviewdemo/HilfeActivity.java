@@ -7,6 +7,7 @@ import android.webkit.WebView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import de.mide.webviewdemo.helferlein.HilfeWebAppInterface;
+import de.mide.webviewdemo.helferlein.HilfeWebChromeClient;
 import de.mide.webviewdemo.helferlein.HilfeWebViewClient;
 
 
@@ -31,6 +32,9 @@ public class HilfeActivity extends AppCompatActivity {
 
         final HilfeWebViewClient webClient = new HilfeWebViewClient(this);
         webView.setWebViewClient(webClient);
+
+        HilfeWebChromeClient webChromeClient = new HilfeWebChromeClient();
+        webView.setWebChromeClient(webChromeClient);
 
         webView.loadUrl("file:///android_asset/hilfe_index.html");
     }
