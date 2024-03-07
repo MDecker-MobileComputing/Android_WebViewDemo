@@ -9,6 +9,7 @@ import android.util.Log;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 
 /**
@@ -66,9 +67,14 @@ public class HilfeWebViewClient extends WebViewClient {
 
             final Intent intent = new Intent(Intent.ACTION_VIEW, zielUrl);
 
-            if (wirdIntentUnterstuetzt(_context, intent)) {
+            if ( wirdIntentUnterstuetzt(_context, intent) ) {
 
                 _context.startActivity(intent);
+
+            } else {
+
+                Log.w(TAG4LOGGING, "Impliziter Intent wird nicht unterstützt: " + intent);
+                Toast.makeText(_context, "Intent wird nicht unterstützt.", Toast.LENGTH_LONG).show();
             }
 
             return true;
