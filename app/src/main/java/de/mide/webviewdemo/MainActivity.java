@@ -2,9 +2,11 @@ package de.mide.webviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -117,6 +119,24 @@ public class MainActivity extends AppCompatActivity {
         String url = "https://http.cat/status/" + statusCodeEingabeTrimmed;
 
         _webView.loadUrl(url);
+
+        keyboardEinklappen(_statusCodeEditText);
+    }
+
+
+    /**
+     * Virtuelles Keyboard wieder "einklappen". Lösung nach
+     * <a href="https://stackoverflow.com/a/17789187/1364368">dieser Antwort</a>
+     * auf <i>stackoverflow.com</i>.
+     *
+     * @param view  UI-Element, von dem Keyboard eingeblendet wurde.
+     */
+    private void keyboardEinklappen(View view) {
+
+        InputMethodManager imm = (InputMethodManager)
+                getSystemService(Activity.INPUT_METHOD_SERVICE);
+
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
 
