@@ -17,6 +17,7 @@ import static de.mide.webviewdemo.BuildConfig.BUILD_ZEITPUNKT;
  */
 public class HilfeWebAppInterface {
 
+    /** Referenz auf die Activity, die das WebView-Element enthält. */
     private Activity _activity;
 
 

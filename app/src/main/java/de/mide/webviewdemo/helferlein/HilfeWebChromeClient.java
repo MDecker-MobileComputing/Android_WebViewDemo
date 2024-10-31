@@ -6,7 +6,7 @@ import android.webkit.WebChromeClient;
 
 
 /**
- * Ein Objekt dieser Klasse muss am WebView-Element mit der Methode {@code setWebViewClient()}
+ * Ein Objekt dieser Klasse kann am WebView-Element mit der Methode {@code setWebViewClient()}
  * registriert werden.
  */
 public class HilfeWebChromeClient extends WebChromeClient {
