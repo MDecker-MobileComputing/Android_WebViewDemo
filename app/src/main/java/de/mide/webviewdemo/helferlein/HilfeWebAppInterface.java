@@ -45,7 +45,7 @@ public class HilfeWebAppInterface {
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(_activity);
 
-        dialogBuilder.setMessage("Version der App: " + BUILD_ZEITPUNKT);
+        dialogBuilder.setMessage("Version der App: " + BUILD_ZEITPUNKT + " Uhr");
         dialogBuilder.setPositiveButton("OK", null);
 
         AlertDialog dialog = dialogBuilder.create();

@@ -12,7 +12,7 @@ import de.mide.webviewdemo.helferlein.HilfeWebViewClient;
 
 
 /**
- * Activity enthält nur WebView-Element, ohne Layout-Datei!
+ * Activity enthält nur WebView-Element, es gibt keine zugehörige Layout-Datei!
  */
 public class HilfeActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class HilfeActivity extends AppCompatActivity {
         HilfeWebChromeClient webChromeClient = new HilfeWebChromeClient();
         webView.setWebChromeClient(webChromeClient);
 
-        webView.loadUrl("file:///android_asset/hilfe_index.html");
+        webView.loadUrl( "file:///android_asset/hilfe_index.html" );
     }
 
 }
