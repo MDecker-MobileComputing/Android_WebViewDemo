@@ -18,8 +18,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        def buildTime = new Date()
-        buildConfigField "String", "BUILD_ZEITPUNKT", "\"${buildTime.format('dd MMM yyyy (EE), HH:mm')}\""
+        def buildZeitpunkt = new Date()
+        def buildZeitpunktStr = buildZeitpunkt.format('dd MMM yyyy (EE), HH:mm')
+        buildConfigField "String", "BUILD_ZEITPUNKT", "\"${buildZeitpunktStr}\""
     }
 
     buildTypes {
