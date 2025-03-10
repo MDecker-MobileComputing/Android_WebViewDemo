@@ -86,6 +86,9 @@ public class HilfeWebViewClient extends WebViewClient {
      * Methode überprüft, ob ein impliziter Intent auf dem Gerät abgeschickt werden kann.
      * Wenn es nicht mindestens eine App, die den Intent unterstützt, dann crasht die
      * App, wenn der Intent trotzdem abgeschickt wird.
+     * <br><br>
+     *
+     * Diese Methode benötigte für neue API-Levels einen Eintrag in der Manifest-Datei.
      *
      * @param context Referenz auf Activity
      *
