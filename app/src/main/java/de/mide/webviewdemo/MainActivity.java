@@ -1,8 +1,9 @@
 package de.mide.webviewdemo;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     private void keyboardEinklappen(View view) {
 
         InputMethodManager imm = (InputMethodManager)
-                getSystemService(Activity.INPUT_METHOD_SERVICE);
+                                    getSystemService(INPUT_METHOD_SERVICE);
 
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }

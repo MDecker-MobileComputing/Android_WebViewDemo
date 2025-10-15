@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'de.mide.webviewdemo'
-    compileSdk 35
+    compileSdk 36
 
     // für BUILD_ZEITPUNKT unten
     android.buildFeatures.buildConfig true
@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId "de.mide.webviewdemo"
         minSdk 24
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 
