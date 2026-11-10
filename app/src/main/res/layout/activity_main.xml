@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C0C0C0"
-    android:fitsSystemWindows="true"
+    android:layout_marginTop="25dp"
     tools:context=".MainActivity">
 
     <EditText
@@ -18,7 +18,6 @@
         android:gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp" />
-
 
     <Button
         android:id="@+id/nachschlagenButton"

@@ -30,7 +30,6 @@
 
     </application>
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- Damit Methode intentWirdUnterstuetzt(Intent) funktioniert -->
